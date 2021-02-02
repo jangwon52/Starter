@@ -1,0 +1,3 @@
+include ':starter'
+include ':app'
+rootProject.name = "StarterSample"
