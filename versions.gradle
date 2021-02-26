@@ -19,6 +19,9 @@ versions.logging_interceptor = "3.11.0"
 versions.rxjava = "3.0.0"
 versions.rxandroid = "3.0.0"
 
+versions.lifecycle_extensions = "2.2.0"
+versions.lifecycle_viewmodel_ktx = "2.3.0"
+
 ext.versions = versions
 
 def build_versions = [:]
@@ -64,5 +67,10 @@ def rxjava = [:]
 rxjava.rxjava = "io.reactivex.rxjava3:rxjava:$versions.rxjava"
 rxjava.rxandroid = "io.reactivex.rxjava3:rxandroid:$versions.rxandroid"
 deps.rxjava = rxjava
+
+def lifecycle = [:]
+lifecycle.lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_extensions"
+lifecycle.viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle_viewmodel_ktx"
+deps.lifecycle = lifecycle
 
 ext.deps = deps

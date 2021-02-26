@@ -22,8 +22,8 @@ class MainFragment : BaseBindingFragment<FragmentMainBinding>(R.layout.fragment_
         for (i in 0..100) {
             list.add(getString(R.string.app_name))
         }
-        val adapter = MainAdapter().apply {
-            replaceAll(list)
+        val adapter = MainDiffCallbackAdapter().apply {
+            submitList(list)
         }
 
         binding.rvMain.adapter = adapter
@@ -34,7 +34,7 @@ class MainFragment : BaseBindingFragment<FragmentMainBinding>(R.layout.fragment_
     companion object {
         fun show(
             fragmentManager: FragmentManager,
-            @IdRes containerViewId: Int
+            @IdRes containerViewId: Int,
         ): MainFragment? {
             return fragmentManager.replaceFragment(containerViewId)
         }
