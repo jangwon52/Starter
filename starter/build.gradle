@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
@@ -9,7 +9,6 @@ android {
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        applicationId "com.mongoose.starter"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1
@@ -46,8 +45,11 @@ dependencies {
     implementation deps.material.material
     implementation deps.constraintlayout.constraintlayout
 
+    implementation deps.rxjava.rxjava
+    implementation deps.rxjava.rxandroid
+
     implementation deps.retrofit.retrofit
     implementation deps.retrofit.converter_gson
     implementation deps.retrofit.okhttp
-    implementation deps.retrofit.okhttp
+    implementation deps.retrofit.logging_interceptor
 }

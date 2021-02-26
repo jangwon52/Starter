@@ -46,5 +46,7 @@ dependencies {
     implementation deps.material.material
     implementation deps.constraintlayout.constraintlayout
 
+    implementation deps.ktx.fragment_ktx
+
     implementation project(':starter')
 }
