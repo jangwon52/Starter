@@ -29,6 +29,8 @@ class MainFragment : BaseBindingFragment<FragmentMainBinding>(R.layout.fragment_
         binding.rvMain.adapter = adapter
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = mainViewModel
+
+        MainBottomSheet.show(childFragmentManager)
     }
 
     companion object {
